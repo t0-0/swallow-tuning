@@ -69,7 +69,7 @@ SEQ_LENGTH=4096
 # checkpoint & tokenizer
 TOKENIZER_DIR=/bb/llm/gaf51275/llama/huggingface-checkpoint/Swallow-7b-hf
 CHECKPOINT_DIR=/bb/llm/gaf51275/llama/huggingface-checkpoint/Swallow-7b-hf
-CHECKPOINT_SAVE_DIR="/groups/gaf51275/swallow-project/checkpoints/finetuning/Swallow-7b-VE-instruct-v1.0/baseline-lr_${LR}-minlr_${MIN_LR}-GB${GLOBAL_BATCH_SIZE}_iter${ITERATIONS}"
+CHECKPOINT_SAVE_DIR="/groups/gcc50623/acf15833kg/swallow-project/checkpoints/finetuning/Swallow-7b-VE-instruct-v1.0/baseline-lr_${LR}-minlr_${MIN_LR}-GB${GLOBAL_BATCH_SIZE}_iter${ITERATIONS}"
 
 mkdir -p ${CHECKPOINT_SAVE_DIR}
 
