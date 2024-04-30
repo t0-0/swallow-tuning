@@ -90,12 +90,14 @@ def main() -> None:
 
     # dataset
     SYSTEM_PROMPT = [
-        {"role": "system", "text": "あなたは誠実で優秀な日本人のアシスタントです。"}
+        {"role": "system", "text": "あなたは誠実で優秀な日本人のアシスタントです。", "content": "あなたは誠実で優秀な日本人のアシスタントです。"}
     ]
 
     def formatting_prompts_func(example):
         output_texts = []
         for i in range(len(example['input'])):
+            for j in range(len(example['input'][i])):
+                example['input'][i][j]['content'] = example['input'][i][j]['text']
             prompt: str = tokenizer.apply_chat_template(
                 conversation=SYSTEM_PROMPT + example["input"][i],  # type: ignore
                 tokenize=False
